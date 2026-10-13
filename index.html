@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Pavan — B.Tech CSE @ VIT Vellore</title>
+  <meta name="description" content="M Pavan — first-year B.Tech CSE student at VIT Vellore. Interested in Human-Computer Interaction, Ubiquitous Computing, and AI/ML." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== SKIP LINK (accessibility) ===== -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar" aria-label="Primary navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="logo-text">M<span class="logo-accent">.</span>Pavan</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#inventions">Concepts</a></li>
+        <li><a href="#career">Goals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Mobile overlay backdrop -->
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-greeting animate-in">Hello, I'm</p>
+        <h1 class="hero-name animate-in anim-delay-1">
+          <span class="gradient-text">M Pavan</span>
+        </h1>
+        <p class="hero-tagline animate-in anim-delay-2">
+          First-Year B.Tech Computer Science &amp; Engineering
+          <span class="tagline-separator" aria-hidden="true">&middot;</span>
+          VIT Vellore
+        </p>
+        <p class="hero-description animate-in anim-delay-3">
+          Exploring the intersection of <strong>Human-Computer Interaction</strong>,
+          <strong>Ubiquitous Computing</strong>, and <strong>AI/ML</strong> &mdash; building
+          technology that integrates naturally into people's lives.
+        </p>
+        <div class="hero-cta animate-in anim-delay-4">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#research" class="btn btn-outline">Research Interests</a>
+        </div>
+        <div class="hero-scroll-indicator animate-in anim-delay-5" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">01</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a first-year B.Tech Computer Science and Engineering student at
+              <strong>VIT Vellore</strong>, motivated by the idea that technology should
+              feel intuitive and respect the people who use it.
+            </p>
+            <p>
+              My primary interests lie in <strong>Human-Computer Interaction (HCI)</strong>
+              and <strong>Ubiquitous Computing</strong> — designing systems that
+              blend into daily routines rather than demand attention. I'm equally drawn
+              to <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>
+              as tools that can make these systems context-aware and adaptive.
+            </p>
+            <p>
+              Beyond technology, I'm fascinated by <strong>astronomy</strong> — the
+              scale of the universe puts engineering challenges into perspective and
+              inspires me to think beyond current boundaries.
+            </p>
+            <!-- EDIT: Add more about yourself here -->
+          </div>
+          <div class="about-interests reveal reveal-delay-1">
+            <h3>Core Interests</h3>
+            <ul class="interest-tags">
+              <li>Human-Computer Interaction</li>
+              <li>Ubiquitous Computing</li>
+              <li>Artificial Intelligence</li>
+              <li>Machine Learning</li>
+              <li>Context-Aware Systems</li>
+              <li>Accessible Design</li>
+              <li>Astronomy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">02</span>
+          <h2 class="section-title">Education &amp; Academic Journey</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <div class="timeline">
+          <!-- Current degree -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker current" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="badge badge-current">Current</span>
+              <h3>B.Tech — Computer Science &amp; Engineering</h3>
+              <p class="timeline-institution">Vellore Institute of Technology (VIT), Vellore</p>
+              <p class="timeline-date">2025 – 2029 (Expected)</p>
+              <!-- EDIT: Add CGPA when available. Example:
+              <p class="timeline-detail"><strong>CGPA:</strong> X.XX / 10</p>
+              -->
+              <p class="timeline-detail">
+                Relevant coursework and academic milestones will be updated as
+                the programme progresses.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="badge badge-completed">Completed</span>
+              <h3>Higher Secondary Education</h3>
+              <p class="timeline-institution">Kuriakose English Medium School, Mannanam &middot; ISC Board</p>
+              <p class="timeline-date">2023 &ndash; 2025</p>
+            </div>
+          </div>
+        </div>
+        <!-- Certifications placeholder -->
+        <div class="certs-placeholder reveal">
+          <h3>Certifications &amp; Achievements</h3>
+          <p class="placeholder-note">
+            Verified certifications, awards, and academic achievements will be listed
+            here as they are earned. No unverified accomplishments are displayed.
+          </p>
+          <!-- EDIT: Uncomment and add certifications when you earn them:
+          <ul class="cert-list">
+            <li>
+              <strong>Certificate Name</strong> — Issuing Organisation
+              <span class="cert-date">Month Year</span>
+            </li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">03</span>
+          <h2 class="section-title">Technical &amp; Professional Skills</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <p class="section-subtitle reveal">
+          All skills are marked <span class="badge badge-learning">Currently Learning</span>
+          unless I can demonstrate verified proficiency. No invented skill levels.
+        </p>
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon" aria-hidden="true">⌨️</span>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <!-- EDIT: Change badge-learning to badge-confirmed ONLY for skills
+                   you can demonstrate with real projects or coursework. -->
+              <span class="badge badge-learning">Python</span>
+              <span class="badge badge-learning">C</span>
+              <span class="badge badge-learning">JavaScript</span>
+              <span class="badge badge-learning">Java</span>
+              <!-- EDIT: Add more languages as you learn them -->
+            </div>
+          </div>
+          <!-- Frameworks & Libraries -->
+          <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-card-header">
+              <span class="skill-icon" aria-hidden="true">🧩</span>
+              <h3>Frameworks &amp; Libraries</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-learning">HTML / CSS</span>
+              <span class="badge badge-learning">React</span>
+              <!-- EDIT: Add frameworks as you learn them -->
+            </div>
+          </div>
+          <!-- Tools & Platforms -->
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-card-header">
+              <span class="skill-icon" aria-hidden="true">🛠️</span>
+              <h3>Tools &amp; Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-learning">Git / GitHub</span>
+              <span class="badge badge-learning">VS Code</span>
+              <span class="badge badge-learning">Linux</span>
+              <!-- EDIT: Add tools as you learn them -->
+            </div>
+          </div>
+          <!-- HCI & Design -->
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <span class="skill-icon" aria-hidden="true">🎨</span>
+              <h3>HCI &amp; Design Knowledge</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-learning">User-Centred Design</span>
+              <span class="badge badge-learning">Accessibility (a11y)</span>
+              <span class="badge badge-learning">Prototyping</span>
+              <!-- EDIT: Add design skills -->
+            </div>
+          </div>
+          <!-- Research Methods -->
+          <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-card-header">
+              <span class="skill-icon" aria-hidden="true">🔬</span>
+              <h3>Research Methods</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-learning">Literature Review</span>
+              <span class="badge badge-learning">User Studies</span>
+              <!-- EDIT: Add research skills -->
+            </div>
+          </div>
+          <!-- Communication -->
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-card-header">
+              <span class="skill-icon" aria-hidden="true">💬</span>
+              <h3>Communication</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-learning">Technical Writing</span>
+              <span class="badge badge-learning">Public Speaking</span>
+              <!-- EDIT: Add communication skills -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">04</span>
+          <h2 class="section-title">Projects — Completed &amp; Ongoing</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <div class="projects-grid">
+          <!-- PriceGuard AI -->
+          <article class="project-card reveal" aria-label="PriceGuard AI project">
+            <div class="project-card-header">
+              <span class="badge badge-completed">Existing Project</span>
+              <div class="project-links">
+                <!-- EDIT: Replace # with your actual GitHub URL and demo URL.
+                     Remove a link entirely if not applicable. -->
+                <a href="#" class="project-link" title="GitHub Repository" aria-label="GitHub repository for PriceGuard AI">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="#" class="project-link" title="Live Demo" aria-label="Live demo for PriceGuard AI">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">PriceGuard AI</h3>
+            <p class="project-description">
+              A price-monitoring dashboard for tracking and comparing product prices.
+              <!-- EDIT: Add confirmed features only. Don't describe features that
+                   aren't built yet. Example of what to add when ready:
+                   "Tracks prices across X platforms with Y update frequency." -->
+            </p>
+            <div class="project-tech">
+              <!-- EDIT: Replace with your actual tech stack. Example:
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">BeautifulSoup</span>
+              -->
+              <span class="tech-tag placeholder-tag">Tech stack to be confirmed</span>
+            </div>
+            <div class="project-screenshot-placeholder">
+              <!-- EDIT: Replace this div with a real screenshot:
+              <img src="assets/priceguard-screenshot.png"
+                   alt="PriceGuard AI dashboard showing price comparison" />
+              -->
+              <p>Screenshots will be added</p>
+            </div>
+          </article>
+
+          <!-- AmbientSense -->
+          <article class="project-card reveal reveal-delay-1" aria-label="AmbientSense project concept">
+            <div class="project-card-header">
+              <span class="badge badge-proposed">Proposed Project</span>
+            </div>
+            <h3 class="project-title">AmbientSense</h3>
+            <p class="project-description">
+              A proposed context-aware interface concept that could adapt notifications
+              and information display to user-selected activities — aiming to reduce
+              digital interruptions by aligning system behaviour with user intent.
+            </p>
+            <div class="project-note">
+              <p>
+                This is a <strong>concept that has not been implemented</strong>.
+                Technology choices, development details, and outcomes will be
+                documented if and when the project begins.
+              </p>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag placeholder-tag">Stack to be determined</span>
+            </div>
+          </article>
+
+          <!-- EDIT: Add more projects by copying a project-card article block above.
+               Use badge-completed for finished projects,
+               badge-proposed for planned projects. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESEARCH ===== -->
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">05</span>
+          <h2 class="section-title">Research Interests &amp; Future Directions</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <div class="section-disclaimer reveal">
+          <p>
+            These are <strong>proposed research directions</strong> reflecting my
+            academic interests. They are <em>not</em> completed studies, ongoing
+            projects, or published papers.
+          </p>
+        </div>
+        <div class="research-grid">
+          <!-- Research 1 -->
+          <article class="research-card reveal" aria-label="Context-aware interfaces research interest">
+            <span class="badge badge-proposed">Proposed Research</span>
+            <h3>Context-Aware Interfaces for Everyday Computing</h3>
+            <div class="research-details">
+              <div class="research-field">
+                <h4>Research Question</h4>
+                <p>How can computing interfaces dynamically adapt to a user's current activity and environment to reduce cognitive load?</p>
+              </div>
+              <div class="research-field">
+                <h4>Motivation</h4>
+                <p>Current interfaces treat every notification and display element equally regardless of context. Context-awareness could make technology less intrusive and more helpful.</p>
+              </div>
+              <div class="research-field">
+                <h4>Possible Methodology</h4>
+                <p>User studies with prototype context-aware interfaces, comparing task completion and interruption metrics against conventional designs.</p>
+              </div>
+              <div class="research-field">
+                <h4>Future Scope</h4>
+                <p>Integration with IoT environments, personalised adaptation models, and frameworks for context-aware UI design patterns.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Research 2 -->
+          <article class="research-card reveal reveal-delay-1" aria-label="Privacy-aware environments research interest">
+            <span class="badge badge-proposed">Proposed Research</span>
+            <h3>Privacy-Aware Smart Environments</h3>
+            <div class="research-details">
+              <div class="research-field">
+                <h4>Research Question</h4>
+                <p>How can smart environments provide personalised services while giving users transparent, meaningful control over their data?</p>
+              </div>
+              <div class="research-field">
+                <h4>Motivation</h4>
+                <p>As smart homes and workspaces collect more data, users need better mechanisms to understand and control what is captured and how it is used.</p>
+              </div>
+              <div class="research-field">
+                <h4>Possible Methodology</h4>
+                <p>Design and evaluate privacy-control interfaces through participatory design sessions and controlled user experiments.</p>
+              </div>
+              <div class="research-field">
+                <h4>Future Scope</h4>
+                <p>Privacy-by-design frameworks for ubiquitous computing, regulatory compliance tools, and user-facing data dashboards.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Research 3 -->
+          <article class="research-card reveal reveal-delay-2" aria-label="Accessible interfaces research interest">
+            <span class="badge badge-proposed">Proposed Research</span>
+            <h3>Accessible Interfaces for Intelligent Assistants</h3>
+            <div class="research-details">
+              <div class="research-field">
+                <h4>Research Question</h4>
+                <p>How can intelligent assistants be designed to be genuinely accessible to users with diverse abilities and technical backgrounds?</p>
+              </div>
+              <div class="research-field">
+                <h4>Motivation</h4>
+                <p>Voice assistants and AI interfaces often assume a narrow range of user abilities. Inclusive design can broaden their benefit to more people.</p>
+              </div>
+              <div class="research-field">
+                <h4>Possible Methodology</h4>
+                <p>Co-design workshops with diverse user groups, accessibility audits of existing assistants, and prototyping alternative interaction modalities.</p>
+              </div>
+              <div class="research-field">
+                <h4>Future Scope</h4>
+                <p>Accessibility guidelines for conversational AI, adaptive interaction models, and inclusive design toolkits for AI systems.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INVENTIONS / PATENT CONCEPTS ===== -->
+    <section class="section section-alt" id="inventions">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">06</span>
+          <h2 class="section-title">Future Inventions &amp; Patent Concepts</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <div class="section-disclaimer reveal">
+          <p>
+            These are <strong>early-stage concepts only</strong> — not filed or
+            granted patents. Each represents an idea I'd like to explore through
+            research and prototyping.
+          </p>
+        </div>
+        <div class="inventions-grid">
+          <!-- Concept 1 -->
+          <article class="invention-card reveal">
+            <div class="invention-icon" aria-hidden="true">💡</div>
+            <span class="badge badge-concept">Concept Only</span>
+            <h3>Adaptive Smart Workspace</h3>
+            <p>
+              A workspace environment that could adjust lighting, sound, display layout,
+              and notification filtering based on the user's current task, schedule,
+              and preferences — aiming to enhance focus and reduce context-switching.
+            </p>
+            <div class="invention-meta">
+              <p><strong>Prior Art:</strong> <em>Research pending — existing smart office and adaptive environment literature to be reviewed.</em></p>
+              <p><strong>Next Step:</strong> <em>Literature review and early concept prototyping.</em></p>
+            </div>
+          </article>
+
+          <!-- Concept 2 -->
+          <article class="invention-card reveal reveal-delay-1">
+            <div class="invention-icon" aria-hidden="true">🔒</div>
+            <span class="badge badge-concept">Concept Only</span>
+            <h3>Context-Aware Privacy Control System</h3>
+            <p>
+              A system that could dynamically adjust privacy settings in smart
+              environments based on who is present, what activity is occurring, and
+              user-defined comfort levels — providing granular, understandable data control.
+            </p>
+            <div class="invention-meta">
+              <p><strong>Prior Art:</strong> <em>Research pending — privacy-aware computing and contextual integrity literature to be reviewed.</em></p>
+              <p><strong>Next Step:</strong> <em>Survey existing privacy frameworks and define system requirements.</em></p>
+            </div>
+          </article>
+
+          <!-- Concept 3 -->
+          <article class="invention-card reveal reveal-delay-2">
+            <div class="invention-icon" aria-hidden="true">🔔</div>
+            <span class="badge badge-concept">Concept Only</span>
+            <h3>User-Controlled Adaptive Notification System</h3>
+            <p>
+              A notification management concept where users set high-level preferences
+              (e.g., "deep focus", "available", "winding down") and the system
+              intelligently filters, delays, or bundles notifications accordingly.
+            </p>
+            <div class="invention-meta">
+              <p><strong>Prior Art:</strong> <em>Research pending — notification management, attention management, and digital wellbeing literature to be reviewed.</em></p>
+              <p><strong>Next Step:</strong> <em>User surveys on notification overload and early prototype design.</em></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CAREER GOALS ===== -->
+    <section class="section" id="career">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">07</span>
+          <h2 class="section-title">Internship &amp; Career Goals</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <div class="section-disclaimer reveal">
+          <p>
+            These are <strong>aspirational targets</strong> reflecting my career
+            interests. I have <em>not</em> applied to, received offers from, or
+            secured positions at any of these organisations.
+          </p>
+        </div>
+        <div class="career-grid">
+          <!-- Samsung -->
+          <article class="career-card reveal">
+            <span class="badge badge-aspirational">Aspirational Goal</span>
+            <h3>Samsung</h3>
+            <p>
+              Interested in Samsung's work on connected devices, smart home ecosystems,
+              and mobile user experiences. Opportunities in HCI research, UX engineering,
+              and AI-powered device interactions align with my interests.
+            </p>
+            <div class="career-areas">
+              <span class="tech-tag">Connected Devices</span>
+              <span class="tech-tag">UX Engineering</span>
+              <span class="tech-tag">Smart Ecosystems</span>
+            </div>
+          </article>
+
+          <!-- Amazon -->
+          <article class="career-card reveal reveal-delay-1">
+            <span class="badge badge-aspirational">Aspirational Goal</span>
+            <h3>Amazon</h3>
+            <p>
+              Drawn to Amazon's scale of impact in AI, voice interfaces, and ambient
+              computing. Software engineering and applied ML roles could offer valuable
+              experience in building human-centred technology at scale.
+            </p>
+            <div class="career-areas">
+              <span class="tech-tag">AI / ML</span>
+              <span class="tech-tag">Voice Interfaces</span>
+              <span class="tech-tag">Software Engineering</span>
+            </div>
+          </article>
+
+          <!-- SpaceX -->
+          <article class="career-card reveal reveal-delay-2">
+            <span class="badge badge-aspirational">Aspirational Goal</span>
+            <h3>SpaceX</h3>
+            <p>
+              Fascinated by SpaceX's engineering culture and the intersection of
+              software with mission-critical systems. Interested in software roles
+              involving human-machine interfaces, telemetry systems, or ground-station
+              software.
+            </p>
+            <div class="career-areas">
+              <span class="tech-tag">Mission-Critical Software</span>
+              <span class="tech-tag">Human-Machine Interfaces</span>
+              <span class="tech-tag">Systems Engineering</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTS (hidden when empty — no invented participation) ===== -->
+    <section class="section section-alt section-hidden" id="events" aria-hidden="true">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">08</span>
+          <h2 class="section-title">Events &amp; Extracurricular Activities</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <!--
+          EDIT: To show this section:
+          1. Remove "section-hidden" from the <section> class list above.
+          2. Change aria-hidden="true" to aria-hidden="false".
+          3. Add your events inside a grid:
+
+          <div class="events-grid">
+            <article class="event-card">
+              <span class="badge badge-confirmed">Attended</span>
+              <h3>Event Name</h3>
+              <p>Description of your role or participation.</p>
+              <p class="event-date">Month Year</p>
+            </article>
+          </div>
+        -->
+      </div>
+    </section>
+
+    <!-- ===== RECOMMENDATIONS (hidden — no fake testimonials) ===== -->
+    <section class="section section-hidden" id="recommendations" aria-hidden="true">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number" aria-hidden="true">09</span>
+          <h2 class="section-title">Letters of Recommendation &amp; Testimonials</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <!--
+          EDIT: To show this section:
+          1. Remove "section-hidden" from the <section> class list.
+          2. Change aria-hidden="true" to aria-hidden="false".
+          3. Add ONLY genuine testimonials with the person's explicit permission:
+
+          <blockquote class="testimonial">
+            <p>"Testimonial text here."</p>
+            <footer>
+              <strong>Name</strong> — Title, Organisation
+            </footer>
+          </blockquote>
+        -->
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-number" aria-hidden="true">08</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+        <div class="contact-content reveal">
+          <p class="contact-intro">
+            I'm open to conversations about HCI, ubiquitous computing, AI,
+            research collaborations, or project ideas. Feel free to reach out.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:mpavan3103@gmail.com" class="contact-item" aria-label="Send email to mpavan3103@gmail.com">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>mpavan3103@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/m-pavan-19b0172bb" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>linkedin.com/in/m-pavan-19b0172bb</span>
+            </a>
+            <a href="https://github.com/mpavan3103" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile mpavan3103 (opens in new tab)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>github.com/mpavan3103</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Designed &amp; built by M Pavan
+        <span class="footer-sep" aria-hidden="true">&middot;</span>
+        &copy; <span id="currentYear">2026</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
