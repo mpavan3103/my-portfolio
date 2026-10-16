@@ -409,6 +409,11 @@ button:focus-visible {
   transform: translateY(-2px);
 }
 
+.btn-sm {
+  padding: 0.5rem 1.15rem;
+  font-size: 0.85rem;
+}
+
 /* Scroll indicator */
 .hero-scroll-indicator {
   position: absolute;
@@ -728,6 +733,10 @@ button:focus-visible {
   border-left: 3px solid var(--proposed);
 }
 .project-note p { margin: 0; }
+.project-note-info {
+  background: rgba(96, 165, 250, 0.05);
+  border-left-color: var(--info);
+}
 
 .project-tech { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 .tech-tag {
@@ -740,6 +749,23 @@ button:focus-visible {
   border: 1px solid var(--border);
 }
 .placeholder-tag { font-style: italic; }
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-xs);
+}
+@media (max-width: 480px) {
+  .project-actions {
+    flex-direction: column;
+  }
+  .project-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 .project-screenshot-placeholder {
   margin-top: var(--space-md);
