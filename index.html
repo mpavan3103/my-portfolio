@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M Pavan — B.Tech CSE @ VIT Vellore</title>
-  <meta name="description" content="M Pavan — first-year B.Tech CSE student at VIT Vellore. Interested in Human-Computer Interaction, Ubiquitous Computing, and AI/ML." />
+  <meta name="description" content="M Pavan — first-year B.Tech CSE student at VIT Vellore. Exploring Human-Computer Interaction (HCI), Ubiquitous Computing, and AI/ML." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,8 +17,9 @@
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar" aria-label="Primary navigation">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo" aria-label="Home">
+      <a href="#hero" class="nav-logo" aria-label="M Pavan Home">
         <span class="logo-text">M<span class="logo-accent">.</span>Pavan</span>
+        <span class="logo-star" aria-hidden="true">*</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="hamburger"></span>
@@ -40,38 +41,78 @@
 
   <main id="main">
 
-    <!-- ===== HERO ===== -->
+    <!-- ===== HERO SECTION (Darkfolio X Style & Interactive Galaxy) ===== -->
     <section class="hero" id="hero">
-      <div class="hero-bg-grid" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="hero-greeting animate-in">Hello, I'm</p>
-        <h1 class="hero-name animate-in anim-delay-1">
-          <span class="gradient-text">M Pavan</span>
-        </h1>
-        <p class="hero-tagline animate-in anim-delay-2">
-          First-Year B.Tech Computer Science &amp; Engineering
-          <span class="tagline-separator" aria-hidden="true">&middot;</span>
-          VIT Vellore
-        </p>
-        <p class="hero-description animate-in anim-delay-3">
-          Exploring the intersection of <strong>Human-Computer Interaction</strong>,
-          <strong>Ubiquitous Computing</strong>, and <strong>AI/ML</strong> &mdash; building
-          technology that integrates naturally into people's lives.
-        </p>
-        <div class="hero-cta animate-in anim-delay-4">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#research" class="btn btn-outline">Research Interests</a>
+      <canvas id="galaxyCanvas" class="hero-galaxy-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <p class="hero-greeting animate-in">
+              <span>&#9670;</span> B.Tech CSE &middot; VIT Vellore
+            </p>
+            <h1 class="hero-name animate-in anim-delay-1">
+              M Pavan<span class="accent-star">*</span>
+            </h1>
+            <p class="hero-tagline animate-in anim-delay-2">
+              First-Year B.Tech Computer Science &amp; Engineering
+              <span class="tagline-sep" aria-hidden="true">&middot;</span>
+              VIT Vellore
+            </p>
+            <p class="hero-description animate-in anim-delay-3">
+              Exploring the intersection of <strong>Human-Computer Interaction (HCI)</strong>,
+              <strong>Ubiquitous Computing</strong>, and <strong>AI/ML</strong> &mdash; motivated by
+              building intelligent interfaces that integrate naturally into people's lives.
+            </p>
+            <div class="hero-cta animate-in anim-delay-4">
+              <a href="#projects" class="btn btn-primary">
+                Explore Projects
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                Get In Touch
+              </a>
+              <button id="heroVoiceBtn" class="btn btn-audio" type="button" aria-label="Listen to introduction aloud" title="Listen to M Pavan's introduction aloud">
+                <svg class="audio-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+                <span class="audio-btn-text">Listen to Intro</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Profile Photo Frame -->
+          <div class="hero-photo-wrapper animate-in anim-delay-2">
+            <div class="hero-photo-frame">
+              <img
+                src="assets/profile.jpg"
+                alt="Portrait photograph of M Pavan"
+                class="hero-photo-img"
+                width="360"
+                height="450"
+                loading="eager"
+              />
+              <div class="photo-corner-tag">
+                <span class="photo-tag-role">VIT Vellore &middot; 2025–2029</span>
+                <span class="photo-tag-status">
+                  <span class="photo-status-pulse" aria-hidden="true"></span>
+                  Active Student
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="hero-scroll-indicator animate-in anim-delay-5" aria-hidden="true">
-          <div class="scroll-line"></div>
-          <span>Scroll</span>
-        </div>
+      </div>
+
+      <div class="hero-scroll-indicator animate-in anim-delay-5" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
+    <!-- ===== 01 / ABOUT ME ===== -->
     <section class="section" id="about">
       <div class="container">
         <div class="section-header reveal">
@@ -88,16 +129,31 @@
             </p>
             <p>
               My primary interests lie in <strong>Human-Computer Interaction (HCI)</strong>
-              and <strong>Ubiquitous Computing</strong> — designing systems that
+              and <strong>Ubiquitous Computing</strong> &mdash; designing systems that
               blend into daily routines rather than demand attention. I'm equally drawn
               to <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>
               as tools that can make these systems context-aware and adaptive.
             </p>
             <p>
-              Beyond technology, I'm fascinated by <strong>astronomy</strong> — the
+              Beyond technology, I'm fascinated by <strong>astronomy</strong> &mdash; the
               scale of the universe puts engineering challenges into perspective and
               inspires me to think beyond current boundaries.
             </p>
+            <!-- Astronomy visual spotlight -->
+            <div class="about-astronomy-card">
+              <img
+                src="assets/astronomy-jwst-carina-nebula.jpg"
+                alt="Cosmic Cliffs in Carina Nebula captured by NASA's James Webb Space Telescope"
+                class="about-astronomy-img"
+                loading="lazy"
+                width="1280"
+                height="548"
+              />
+              <div class="about-astronomy-caption">
+                <span>Cosmic Cliffs &middot; Carina Nebula</span>
+                <span class="image-attribution">Photo: NASA / ESA / CSA / STScI (Public Domain)</span>
+              </div>
+            </div>
             <!-- EDIT: Add more about yourself here -->
           </div>
           <div class="about-interests reveal reveal-delay-1">
@@ -116,7 +172,7 @@
       </div>
     </section>
 
-    <!-- ===== EDUCATION ===== -->
+    <!-- ===== 02 / EDUCATION ===== -->
     <section class="section section-alt" id="education">
       <div class="container">
         <div class="section-header reveal">
@@ -130,7 +186,7 @@
             <div class="timeline-marker current" aria-hidden="true"></div>
             <div class="timeline-content">
               <span class="badge badge-current">Current</span>
-              <h3>B.Tech — Computer Science &amp; Engineering</h3>
+              <h3>B.Tech &mdash; Computer Science &amp; Engineering</h3>
               <p class="timeline-institution">Vellore Institute of Technology (VIT), Vellore</p>
               <p class="timeline-date">2025 – 2029 (Expected)</p>
               <!-- EDIT: Add CGPA when available. Example:
@@ -140,8 +196,23 @@
                 Relevant coursework and academic milestones will be updated as
                 the programme progresses.
               </p>
+              <div class="timeline-media" style="margin-top: var(--space-md); border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
+                <img
+                  src="assets/computer-workstation.jpg"
+                  alt="Computer engineering workstation and monitor setup"
+                  loading="lazy"
+                  width="1280"
+                  height="720"
+                  style="width: 100%; aspect-ratio: 16 / 7; object-fit: cover;"
+                />
+                <div style="padding: 6px 12px; background: var(--bg-secondary); border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">
+                  <span>Computer Engineering Workstation</span>
+                  <span>Photo: A. R. Yeo (CC BY-SA 3.0)</span>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- Higher Secondary -->
           <div class="timeline-item reveal reveal-delay-1">
             <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-content">
@@ -171,7 +242,7 @@
       </div>
     </section>
 
-    <!-- ===== SKILLS ===== -->
+    <!-- ===== 03 / SKILLS ===== -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section-header reveal">
@@ -197,7 +268,6 @@
               <span class="badge badge-learning">C</span>
               <span class="badge badge-learning">JavaScript</span>
               <span class="badge badge-learning">Java</span>
-              <!-- EDIT: Add more languages as you learn them -->
             </div>
           </div>
           <!-- Frameworks & Libraries -->
@@ -209,7 +279,6 @@
             <div class="skill-tags">
               <span class="badge badge-learning">HTML / CSS</span>
               <span class="badge badge-learning">React</span>
-              <!-- EDIT: Add frameworks as you learn them -->
             </div>
           </div>
           <!-- Tools & Platforms -->
@@ -222,7 +291,6 @@
               <span class="badge badge-learning">Git / GitHub</span>
               <span class="badge badge-learning">VS Code</span>
               <span class="badge badge-learning">Linux</span>
-              <!-- EDIT: Add tools as you learn them -->
             </div>
           </div>
           <!-- HCI & Design -->
@@ -235,7 +303,6 @@
               <span class="badge badge-learning">User-Centred Design</span>
               <span class="badge badge-learning">Accessibility (a11y)</span>
               <span class="badge badge-learning">Prototyping</span>
-              <!-- EDIT: Add design skills -->
             </div>
           </div>
           <!-- Research Methods -->
@@ -247,7 +314,6 @@
             <div class="skill-tags">
               <span class="badge badge-learning">Literature Review</span>
               <span class="badge badge-learning">User Studies</span>
-              <!-- EDIT: Add research skills -->
             </div>
           </div>
           <!-- Communication -->
@@ -259,14 +325,13 @@
             <div class="skill-tags">
               <span class="badge badge-learning">Technical Writing</span>
               <span class="badge badge-learning">Public Speaking</span>
-              <!-- EDIT: Add communication skills -->
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== PROJECTS ===== -->
+    <!-- ===== 04 / PROJECTS ===== -->
     <section class="section section-alt" id="projects">
       <div class="container">
         <div class="section-header reveal">
@@ -275,77 +340,116 @@
           <div class="section-line" aria-hidden="true"></div>
         </div>
         <div class="projects-grid">
-          <!-- PriceGuard AI -->
+          
+          <!-- PriceGuard AI Card with Real Screenshot -->
           <article class="project-card reveal" aria-label="PriceGuard AI project">
-            <div class="project-card-header">
-              <span class="badge badge-completed">Existing Project</span>
-              <div class="project-links">
-                <a href="https://github.com/mpavan3103/priceguard-ai" class="project-link" title="GitHub Repository" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for PriceGuard AI (opens in a new tab)">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <a href="priceguard-ai.html" class="project-screenshot-link" title="View PriceGuard AI case study &amp; details">
+              <img
+                src="assets/priceguard-dashboard.png"
+                alt="PriceGuard AI dashboard screenshot showing commodity price tracking, reasonability scores, and anomaly alerts"
+                class="project-screenshot-img"
+                loading="lazy"
+              />
+              <div class="project-screenshot-overlay">
+                <span class="view-details-pill">
+                  View Case Study &rarr;
+                </span>
+              </div>
+            </a>
+            <div class="project-card-body">
+              <div class="project-card-header">
+                <span class="badge badge-completed">Existing Project</span>
+                <div class="project-links">
+                  <a href="https://github.com/mpavan3103/priceguard-ai" class="project-link" title="GitHub Repository" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for PriceGuard AI (opens in a new tab)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                  <a href="https://mpavan3103.github.io/priceguard-ai/" class="project-link" title="Live Demo" target="_blank" rel="noopener noreferrer" aria-label="Live demo for PriceGuard AI (opens in a new tab)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">
+                <a href="priceguard-ai.html">PriceGuard AI</a>
+              </h3>
+              <p class="project-description">
+                A price-monitoring dashboard for tracking and comparing commodity prices and evaluating market reasonability using statistical models.
+              </p>
+              <div class="project-note project-note-info">
+                <p>
+                  <strong>Demo Note:</strong> The public GitHub Pages version runs browser-side calculations using benchmark reference datasets; the standalone Python ML backend is documented in the project repository.
+                </p>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Chart.js</span>
+                <span class="tech-tag">HTML5 / CSS3</span>
+                <span class="tech-tag">Python (Repo Backend)</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://mpavan3103.github.io/priceguard-ai/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" aria-label="PriceGuard AI Live Demo (opens in a new tab)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Live Demo</span>
                 </a>
-                <a href="https://mpavan3103.github.io/priceguard-ai/" class="project-link" title="Live Demo" target="_blank" rel="noopener noreferrer" aria-label="Live demo for PriceGuard AI (opens in a new tab)">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <a href="https://github.com/mpavan3103/priceguard-ai" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer" aria-label="View PriceGuard AI on GitHub (opens in a new tab)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>View GitHub</span>
+                </a>
+                <a href="priceguard-ai.html" class="project-details-link" aria-label="Read PriceGuard AI case study">
+                  Details &rarr;
                 </a>
               </div>
             </div>
-            <h3 class="project-title">PriceGuard AI</h3>
-            <p class="project-description">
-              A price-monitoring dashboard for tracking and comparing commodity prices and reasonability.
-            </p>
-            <div class="project-note project-note-info">
-              <p>
-                <strong>Demo Note:</strong> The public GitHub Pages version runs browser-side calculations using benchmark reference datasets; the standalone Python ML backend is documented in the project repository.
-              </p>
-            </div>
-            <div class="project-tech">
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Chart.js</span>
-              <span class="tech-tag">HTML5 / CSS3</span>
-              <span class="tech-tag">Python (Repo Backend)</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://mpavan3103.github.io/priceguard-ai/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" aria-label="PriceGuard AI Live Demo (opens in a new tab)">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                <span>Live Demo</span>
-              </a>
-              <a href="https://github.com/mpavan3103/priceguard-ai" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer" aria-label="View PriceGuard AI on GitHub (opens in a new tab)">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                <span>View on GitHub</span>
-              </a>
-            </div>
           </article>
 
-          <!-- AmbientSense -->
+          <!-- AmbientSense Card (Proposed Concept) -->
           <article class="project-card reveal reveal-delay-1" aria-label="AmbientSense project concept">
-            <div class="project-card-header">
-              <span class="badge badge-proposed">Proposed Project</span>
+            <div class="project-screenshot-link" style="cursor: default;">
+              <img
+                src="assets/ambient-sensor-node.jpg"
+                alt="Wireless environmental sensor network node hardware (CSIRO ScienceImage reference)"
+                class="project-screenshot-img"
+                loading="lazy"
+                width="1280"
+                height="720"
+              />
+              <div class="project-screenshot-overlay" style="opacity: 1;">
+                <span class="view-details-pill" style="background: rgba(251, 146, 60, 0.9); color: #fff;">
+                  Proposed Concept &middot; Illustrative Hardware
+                </span>
+              </div>
             </div>
-            <h3 class="project-title">AmbientSense</h3>
-            <p class="project-description">
-              A proposed context-aware interface concept that could adapt notifications
-              and information display to user-selected activities — aiming to reduce
-              digital interruptions by aligning system behaviour with user intent.
-            </p>
-            <div class="project-note">
-              <p>
-                This is a <strong>concept that has not been implemented</strong>.
-                Technology choices, development details, and outcomes will be
-                documented if and when the project begins.
+            <div class="project-card-body">
+              <div class="project-card-header">
+                <span class="badge badge-proposed">Proposed Project</span>
+              </div>
+              <h3 class="project-title">AmbientSense</h3>
+              <p class="project-description">
+                A proposed context-aware interface concept designed to adapt notifications
+                and information displays based on user-selected activities &mdash; aiming to reduce
+                digital interruptions by aligning system behaviour with cognitive intent.
               </p>
-            </div>
-            <div class="project-tech">
-              <span class="tech-tag placeholder-tag">Stack to be determined</span>
+              <div class="project-note">
+                <p>
+                  This is a <strong>concept that has not yet been implemented</strong>.
+                  The photograph above depicts a wireless environmental sensor node (CSIRO ScienceImage / Stephan Brosnan, CC BY 3.0) as an illustrative hardware reference, not an actual project prototype.
+                </p>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag placeholder-tag">Stack to be determined</span>
+                <span class="tech-tag placeholder-tag">HCI Concept</span>
+                <span class="tech-tag placeholder-tag">Context Adaptation</span>
+              </div>
+              <p class="image-attribution">
+                Photo: CSIRO Fleck Sensor Node by Stephan Brosnan (CC BY 3.0)
+              </p>
             </div>
           </article>
 
-          <!-- EDIT: Add more projects by copying a project-card article block above.
-               Use badge-completed for finished projects,
-               badge-proposed for planned projects. -->
         </div>
       </div>
     </section>
 
-    <!-- ===== RESEARCH ===== -->
+    <!-- ===== 05 / RESEARCH ===== -->
     <section class="section" id="research">
       <div class="container">
         <div class="section-header reveal">
@@ -383,6 +487,17 @@
                 <p>Integration with IoT environments, personalised adaptation models, and frameworks for context-aware UI design patterns.</p>
               </div>
             </div>
+            <div class="card-media" style="margin-top: var(--space-md); border-radius: 8px;">
+              <img
+                src="assets/smart-display-hub.jpg"
+                alt="Amazon Echo Show ambient smart display interface"
+                class="card-media-img"
+                loading="lazy"
+                width="1280"
+                height="720"
+              />
+            </div>
+            <p class="image-attribution">Illustrative hardware reference: Japanwikisan (CC BY 4.0)</p>
           </article>
 
           <!-- Research 2 -->
@@ -431,12 +546,23 @@
                 <p>Accessibility guidelines for conversational AI, adaptive interaction models, and inclusive design toolkits for AI systems.</p>
               </div>
             </div>
+            <div class="card-media" style="margin-top: var(--space-md); border-radius: 8px;">
+              <img
+                src="assets/voice-assistant-echo.jpg"
+                alt="Amazon Echo Plus smart speaker voice assistant device"
+                class="card-media-img"
+                loading="lazy"
+                width="1280"
+                height="720"
+              />
+            </div>
+            <p class="image-attribution">Illustrative voice assistant reference: Asivechowdhury (CC BY-SA 4.0)</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== INVENTIONS / PATENT CONCEPTS ===== -->
+    <!-- ===== 06 / INVENTIONS / PATENT CONCEPTS ===== -->
     <section class="section section-alt" id="inventions">
       <div class="container">
         <div class="section-header reveal">
@@ -446,7 +572,7 @@
         </div>
         <div class="section-disclaimer reveal">
           <p>
-            These are <strong>early-stage concepts only</strong> — not filed or
+            These are <strong>early-stage concepts only</strong> &mdash; not filed or
             granted patents. Each represents an idea I'd like to explore through
             research and prototyping.
           </p>
@@ -454,17 +580,29 @@
         <div class="inventions-grid">
           <!-- Concept 1 -->
           <article class="invention-card reveal">
-            <div class="invention-icon" aria-hidden="true">💡</div>
-            <span class="badge badge-concept">Concept Only</span>
-            <h3>Adaptive Smart Workspace</h3>
-            <p>
-              A workspace environment that could adjust lighting, sound, display layout,
-              and notification filtering based on the user's current task, schedule,
-              and preferences — aiming to enhance focus and reduce context-switching.
-            </p>
-            <div class="invention-meta">
-              <p><strong>Prior Art:</strong> <em>Research pending — existing smart office and adaptive environment literature to be reviewed.</em></p>
-              <p><strong>Next Step:</strong> <em>Literature review and early concept prototyping.</em></p>
+            <div class="card-media">
+              <img
+                src="assets/embedded-hardware-arduino.jpg"
+                alt="Arduino Uno microcontroller development board for hardware prototyping (SparkFun photo)"
+                class="card-media-img"
+                loading="lazy"
+                width="1280"
+                height="720"
+              />
+            </div>
+            <div style="padding-top: var(--space-md);">
+              <span class="badge badge-concept">Concept Only</span>
+              <h3>Adaptive Smart Workspace</h3>
+              <p>
+                A workspace environment that could adjust lighting, sound, display layout,
+                and notification filtering based on the user's current task, schedule,
+                and preferences &mdash; aiming to enhance focus and reduce context-switching.
+              </p>
+              <div class="invention-meta">
+                <p><strong>Prior Art:</strong> <em>Research pending &mdash; existing smart office and adaptive environment literature to be reviewed.</em></p>
+                <p><strong>Next Step:</strong> <em>Literature review and early concept prototyping.</em></p>
+                <p class="image-attribution">Hardware reference: SparkFun Electronics (CC BY 2.0)</p>
+              </div>
             </div>
           </article>
 
@@ -476,34 +614,46 @@
             <p>
               A system that could dynamically adjust privacy settings in smart
               environments based on who is present, what activity is occurring, and
-              user-defined comfort levels — providing granular, understandable data control.
+              user-defined comfort levels &mdash; providing granular, understandable data control.
             </p>
             <div class="invention-meta">
-              <p><strong>Prior Art:</strong> <em>Research pending — privacy-aware computing and contextual integrity literature to be reviewed.</em></p>
+              <p><strong>Prior Art:</strong> <em>Research pending &mdash; privacy-aware computing and contextual integrity literature to be reviewed.</em></p>
               <p><strong>Next Step:</strong> <em>Survey existing privacy frameworks and define system requirements.</em></p>
             </div>
           </article>
 
           <!-- Concept 3 -->
           <article class="invention-card reveal reveal-delay-2">
-            <div class="invention-icon" aria-hidden="true">🔔</div>
-            <span class="badge badge-concept">Concept Only</span>
-            <h3>User-Controlled Adaptive Notification System</h3>
-            <p>
-              A notification management concept where users set high-level preferences
-              (e.g., "deep focus", "available", "winding down") and the system
-              intelligently filters, delays, or bundles notifications accordingly.
-            </p>
-            <div class="invention-meta">
-              <p><strong>Prior Art:</strong> <em>Research pending — notification management, attention management, and digital wellbeing literature to be reviewed.</em></p>
-              <p><strong>Next Step:</strong> <em>User surveys on notification overload and early prototype design.</em></p>
+            <div class="card-media">
+              <img
+                src="assets/smartwatch-notification.jpg"
+                alt="Smartwatch notification display on Pebble Time Steel"
+                class="card-media-img"
+                loading="lazy"
+                width="1280"
+                height="720"
+              />
+            </div>
+            <div style="padding-top: var(--space-md);">
+              <span class="badge badge-concept">Concept Only</span>
+              <h3>User-Controlled Adaptive Notification System</h3>
+              <p>
+                A notification management concept where users set high-level preferences
+                (e.g., "deep focus", "available", "winding down") and the system
+                intelligently filters, delays, or bundles notifications accordingly.
+              </p>
+              <div class="invention-meta">
+                <p><strong>Prior Art:</strong> <em>Research pending &mdash; notification management, attention management, and digital wellbeing literature to be reviewed.</em></p>
+                <p><strong>Next Step:</strong> <em>User surveys on notification overload and early prototype design.</em></p>
+                <p class="image-attribution">Illustrative notification hardware: Wikimedia Commons (CC BY-SA 3.0)</p>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== CAREER GOALS ===== -->
+    <!-- ===== 07 / CAREER GOALS ===== -->
     <section class="section" id="career">
       <div class="container">
         <div class="section-header reveal">
@@ -521,13 +671,18 @@
         <div class="career-grid">
           <!-- Samsung -->
           <article class="career-card reveal">
-            <span class="badge badge-aspirational">Aspirational Goal</span>
-            <h3>Samsung</h3>
-            <p>
-              Interested in Samsung's work on connected devices, smart home ecosystems,
-              and mobile user experiences. Opportunities in HCI research, UX engineering,
-              and AI-powered device interactions align with my interests.
-            </p>
+            <div class="career-logo-header">
+              <span class="badge badge-aspirational">Aspirational Goal</span>
+              <img src="assets/samsung-logo.svg" alt="Samsung official logo" class="career-logo career-logo-samsung" width="135" height="24" />
+            </div>
+            <div class="career-card-content">
+              <h3>Samsung</h3>
+              <p>
+                Interested in Samsung's work on connected devices, smart home ecosystems,
+                and mobile user experiences. Opportunities in HCI research, UX engineering,
+                and AI-powered device interactions align with my interests.
+              </p>
+            </div>
             <div class="career-areas">
               <span class="tech-tag">Connected Devices</span>
               <span class="tech-tag">UX Engineering</span>
@@ -537,13 +692,18 @@
 
           <!-- Amazon -->
           <article class="career-card reveal reveal-delay-1">
-            <span class="badge badge-aspirational">Aspirational Goal</span>
-            <h3>Amazon</h3>
-            <p>
-              Drawn to Amazon's scale of impact in AI, voice interfaces, and ambient
-              computing. Software engineering and applied ML roles could offer valuable
-              experience in building human-centred technology at scale.
-            </p>
+            <div class="career-logo-header">
+              <span class="badge badge-aspirational">Aspirational Goal</span>
+              <img src="assets/amazon-logo.svg" alt="Amazon official logo" class="career-logo career-logo-amazon" width="105" height="28" />
+            </div>
+            <div class="career-card-content">
+              <h3>Amazon</h3>
+              <p>
+                Drawn to Amazon's scale of impact in AI, voice interfaces, and ambient
+                computing. Software engineering and applied ML roles could offer valuable
+                experience in building human-centred technology at scale.
+              </p>
+            </div>
             <div class="career-areas">
               <span class="tech-tag">AI / ML</span>
               <span class="tech-tag">Voice Interfaces</span>
@@ -552,20 +712,38 @@
           </article>
 
           <!-- SpaceX -->
-          <article class="career-card reveal reveal-delay-2">
-            <span class="badge badge-aspirational">Aspirational Goal</span>
-            <h3>SpaceX</h3>
-            <p>
-              Fascinated by SpaceX's engineering culture and the intersection of
-              software with mission-critical systems. Interested in software roles
-              involving human-machine interfaces, telemetry systems, or ground-station
-              software.
-            </p>
+          <article class="career-card career-card-spacex reveal reveal-delay-2">
+            <div class="career-logo-header">
+              <span class="badge badge-aspirational">Aspirational Goal</span>
+              <img src="assets/spacex-logo.svg" alt="SpaceX official logo" class="career-logo career-logo-spacex" width="125" height="18" />
+            </div>
+            <div class="career-card-content">
+              <div class="career-media">
+                <img
+                  src="assets/spacex-falcon9-night-launch.jpg"
+                  alt="SpaceX Falcon 9 night launch carrying Dragon from Launch Complex 39A (NASA photograph)"
+                  class="career-media-img"
+                  loading="lazy"
+                  width="1280"
+                  height="720"
+                />
+              </div>
+              <h3>SpaceX</h3>
+              <p>
+                Fascinated by SpaceX's engineering culture and the intersection of
+                software with mission-critical systems. Interested in software roles
+                involving human-machine interfaces, telemetry systems, or ground-station
+                software.
+              </p>
+            </div>
             <div class="career-areas">
               <span class="tech-tag">Mission-Critical Software</span>
               <span class="tech-tag">Human-Machine Interfaces</span>
               <span class="tech-tag">Systems Engineering</span>
             </div>
+            <p class="image-attribution">
+              Photo: NASA / Kevin Davis &amp; Kevin O'Connell (Public Domain)
+            </p>
           </article>
         </div>
       </div>
@@ -583,16 +761,6 @@
           EDIT: To show this section:
           1. Remove "section-hidden" from the <section> class list above.
           2. Change aria-hidden="true" to aria-hidden="false".
-          3. Add your events inside a grid:
-
-          <div class="events-grid">
-            <article class="event-card">
-              <span class="badge badge-confirmed">Attended</span>
-              <h3>Event Name</h3>
-              <p>Description of your role or participation.</p>
-              <p class="event-date">Month Year</p>
-            </article>
-          </div>
         -->
       </div>
     </section>
@@ -609,19 +777,11 @@
           EDIT: To show this section:
           1. Remove "section-hidden" from the <section> class list.
           2. Change aria-hidden="true" to aria-hidden="false".
-          3. Add ONLY genuine testimonials with the person's explicit permission:
-
-          <blockquote class="testimonial">
-            <p>"Testimonial text here."</p>
-            <footer>
-              <strong>Name</strong> — Title, Organisation
-            </footer>
-          </blockquote>
         -->
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- ===== 08 / CONTACT ===== -->
     <section class="section section-alt" id="contact">
       <div class="container">
         <div class="section-header reveal">
@@ -636,15 +796,15 @@
           </p>
           <div class="contact-links">
             <a href="mailto:mpavan3103@gmail.com" class="contact-item" aria-label="Send email to mpavan3103@gmail.com">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <span>mpavan3103@gmail.com</span>
             </a>
             <a href="https://www.linkedin.com/in/m-pavan-19b0172bb" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               <span>linkedin.com/in/m-pavan-19b0172bb</span>
             </a>
             <a href="https://github.com/mpavan3103" class="contact-item" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile mpavan3103 (opens in new tab)">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               <span>github.com/mpavan3103</span>
             </a>
           </div>
@@ -666,5 +826,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="voice-reader.js"></script>
 </body>
 </html>

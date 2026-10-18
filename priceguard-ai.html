@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PriceGuard AI — Case Study &amp; Architecture | M Pavan</title>
+  <meta name="description" content="Detailed case study and architecture overview for PriceGuard AI — a commodity price reasonability and anomaly tracker by M Pavan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== SKIP LINK ===== -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar" aria-label="Primary navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="M Pavan Home">
+        <span class="logo-text">M<span class="logo-accent">.</span>Pavan</span>
+        <span class="logo-star" aria-hidden="true">*</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects" class="active">Projects</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#inventions">Concepts</a></li>
+        <li><a href="index.html#career">Goals</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ===== PROJECT HEADER ===== -->
+    <header class="detail-header">
+      <div class="container">
+        <a href="index.html#projects" class="detail-back-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Projects
+        </a>
+
+        <div style="margin-bottom: var(--space-sm);">
+          <span class="badge badge-completed">Existing Project &middot; Live Demo</span>
+        </div>
+
+        <h1 class="detail-title">PriceGuard AI</h1>
+        <p class="detail-lead">
+          An automated market oversight dashboard designed to evaluate commodity price reasonability, detect artificial price gouging, and protect consumer welfare using statistical models.
+        </p>
+
+        <div class="hero-cta" style="margin-bottom: var(--space-xl);">
+          <a href="https://mpavan3103.github.io/priceguard-ai/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Launch Live Demo
+          </a>
+          <a href="https://github.com/mpavan3103/priceguard-ai" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            View on GitHub
+          </a>
+        </div>
+
+        <!-- Audio Case Study Voice Reader -->
+        <div id="projectVoiceReader" class="project-voice-reader"></div>
+
+        <div class="detail-meta-bar">
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Domain</span>
+            <span class="detail-meta-val">Computational Pricing &amp; Market HCI</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Frontend Stack</span>
+            <span class="detail-meta-val">Vanilla JavaScript &middot; Chart.js &middot; CSS3</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Backend Model</span>
+            <span class="detail-meta-val">Python &middot; scikit-learn (Isolation Forest)</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Deployment</span>
+            <span class="detail-meta-val">GitHub Pages (Static Client-Side)</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== PROJECT CONTENT ===== -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Disclosure Banner -->
+        <div class="section-disclaimer" style="border-left-color: var(--info); background: rgba(56, 189, 248, 0.05); margin-bottom: var(--space-3xl);">
+          <p style="color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">Verified System Disclosure</p>
+          <p>
+            The public GitHub Pages demo runs browser-side calculations based on historical AGMARKNET and eNAM benchmark datasets. It demonstrates the interaction design, statistical bounds, and scoring logic. The standalone Python machine learning backend (Isolation Forest &amp; anomaly pipelines) is documented and available in the GitHub repository.
+          </p>
+        </div>
+
+        <!-- 01 / Problem & Solution -->
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2 class="section-title">Problem &amp; Solution</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-grid" style="margin-bottom: var(--space-3xl);">
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: var(--space-sm); color: var(--text-primary);">The Challenge</h3>
+            <p style="color: var(--text-secondary); margin-bottom: var(--space-md); line-height: 1.8;">
+              Consumers and market supervisors often lack accessible, real-time mechanisms to evaluate whether retail commodity prices reflect legitimate market supply-demand fundamentals or unjustified retail inflation. Traditional agricultural market reports are dense, tabular, and difficult for non-specialists to interpret.
+            </p>
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: var(--space-sm); color: var(--text-primary);">The Approach</h3>
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+              PriceGuard AI structures complex price variance into an intuitive, accessible interface. By pairing dynamic statistical confidence bands with an ensemble anomaly score, the platform transforms raw market data into actionable clarity.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02 / Screenshots Showcase -->
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2 class="section-title">Interface &amp; Visualizations</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="section-subtitle">
+          Actual screenshots from the working PriceGuard AI dashboard demonstrating the interface layout and data visualization features.
+        </p>
+
+        <div class="detail-gallery">
+          <!-- Screenshot 1 -->
+          <figure class="detail-figure">
+            <img
+              src="assets/priceguard-dashboard.png"
+              alt="PriceGuard AI main dashboard overview displaying high-level metrics, market state indicators, and commodity filters"
+              loading="lazy"
+            />
+            <figcaption class="detail-figcaption">
+              <strong>Figure 1: Main Dashboard Overview</strong> &mdash; Displays high-level market indicators (tracked commodities, average reasonability index, active high anomaly alerts, and market equilibrium state) along with category filtering for grains, vegetables, dairy, and essential goods.
+            </figcaption>
+          </figure>
+
+          <!-- Screenshot 2 -->
+          <figure class="detail-figure">
+            <img
+              src="assets/priceguard-comparison.png"
+              alt="PriceGuard AI commodity comparison interface with direct metric comparison and 12-month historical price chart"
+              loading="lazy"
+            />
+            <figcaption class="detail-figcaption">
+              <strong>Figure 2: Multi-Commodity Comparison &amp; Trend Analysis</strong> &mdash; Side-by-side evaluation (e.g., Basmati Rice vs. Onion) detailing current price, fair range bounds, reasonability index, Z-score deviation, volatility, ML anomaly decision, and a 12-month historical price curve.
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- 03 / System Architecture -->
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2 class="section-title">How It Works</h2>
+          <div class="section-line"></div>
+        </div>
+        <p class="section-subtitle">
+          PriceGuard AI combines a multi-stage statistical workflow with client-side interactive rendering.
+        </p>
+
+        <div class="workflow-grid">
+          <div class="workflow-card">
+            <div class="workflow-step-num">STEP 01</div>
+            <h4>Benchmark Ingestion</h4>
+            <p>Historical price indices from eNAM and AGMARKNET reference benchmarks establish a robust statistical baseline.</p>
+          </div>
+          <div class="workflow-card">
+            <div class="workflow-step-num">STEP 02</div>
+            <h4>Statistical Bounds</h4>
+            <p>Computes mean price bands, coefficient of variation (CV), and rolling standard deviations for fair-value boundaries.</p>
+          </div>
+          <div class="workflow-card">
+            <div class="workflow-step-num">STEP 03</div>
+            <h4>Anomaly Scoring</h4>
+            <p>Z-score variance and Isolation Forest heuristics flag sudden price spikes that diverge significantly from normal seasonal trends.</p>
+          </div>
+          <div class="workflow-card">
+            <div class="workflow-step-num">STEP 04</div>
+            <h4>Interface Rendering</h4>
+            <p>Client-side Chart.js visualizations and reactive controls present intuitive comparisons without latency.</p>
+          </div>
+        </div>
+
+        <!-- 04 / Core Features -->
+        <div class="section-header" style="margin-top: var(--space-3xl);">
+          <span class="section-number">04</span>
+          <h2 class="section-title">Key Implemented Features</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <ul class="feature-list">
+          <li>
+            <span class="feature-list-icon">&#9670;</span>
+            <div>
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Reasonability Index</strong>
+              Calculates a percentage score reflecting whether a commodity is priced fairly within computed statistical bounds.
+            </div>
+          </li>
+          <li>
+            <span class="feature-list-icon">&#9670;</span>
+            <div>
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Side-by-Side Comparison</strong>
+              Directly contrast two commodities across current price, volatility, trend percentage, and anomaly flags.
+            </div>
+          </li>
+          <li>
+            <span class="feature-list-icon">&#9670;</span>
+            <div>
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">12-Month Trend Visualisation</strong>
+              Interactive historical curves rendered with Chart.js to inspect price movements across past quarters.
+            </div>
+          </li>
+          <li>
+            <span class="feature-list-icon">&#9670;</span>
+            <div>
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Anomaly Alert Indicators</strong>
+              Clear color-coded badges (Watch vs. Alert) reflecting Isolation Forest and standard deviation thresholds.
+            </div>
+          </li>
+          <li>
+            <span class="feature-list-icon">&#9670;</span>
+            <div>
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Commodity Categories</strong>
+              Instant filtering across staple groups: Grains, Vegetables, Dairy, and Daily Essentials.
+            </div>
+          </li>
+          <li>
+            <span class="feature-list-icon">&#9670;</span>
+            <div>
+              <strong style="color: var(--text-primary); display: block; margin-bottom: 2px;">Responsive Dark Theme</strong>
+              Engineered for seamless viewing across desktop monitors, tablets, and mobile devices.
+            </div>
+          </li>
+        </ul>
+
+        <!-- 05 / Technology Stack -->
+        <div class="section-header" style="margin-top: var(--space-3xl);">
+          <span class="section-number">05</span>
+          <h2 class="section-title">Technology Stack</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid" style="margin-bottom: var(--space-3xl);">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-icon">🎨</span>
+              <h3>Frontend Interface</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-completed">HTML5</span>
+              <span class="badge badge-completed">CSS3</span>
+              <span class="badge badge-completed">JavaScript (ES6+)</span>
+              <span class="badge badge-completed">Chart.js</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-icon">⚙️</span>
+              <h3>Backend &amp; ML (Repo)</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-completed">Python 3</span>
+              <span class="badge badge-completed">scikit-learn</span>
+              <span class="badge badge-completed">NumPy / pandas</span>
+              <span class="badge badge-completed">Isolation Forest</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-icon">🚀</span>
+              <h3>Deployment &amp; Tooling</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="badge badge-completed">GitHub Pages</span>
+              <span class="badge badge-completed">Git</span>
+              <span class="badge badge-completed">VS Code</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="certs-placeholder" style="border-style: solid; border-color: var(--border); text-align: left; padding: var(--space-2xl);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-lg);">
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: var(--space-xs);">Explore the Project in Action</h3>
+              <p style="color: var(--text-secondary); max-width: 540px; margin: 0;">
+                Test commodity reasonability comparisons live on GitHub Pages, or inspect the model implementation and codebase on GitHub.
+              </p>
+            </div>
+            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+              <a href="https://mpavan3103.github.io/priceguard-ai/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                Live Demo &rarr;
+              </a>
+              <a href="https://github.com/mpavan3103/priceguard-ai" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="index.html#projects" style="color: var(--accent); font-weight: 600;">&larr; Back to Portfolio</a>
+        <span class="footer-sep" aria-hidden="true">&middot;</span>
+        PriceGuard AI Case Study &middot; M Pavan &middot; &copy; <span id="currentYear">2026</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="voice-reader.js"></script>
+</body>
+</html>
