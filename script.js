@@ -429,9 +429,138 @@
 
   // Initialize interactive particle galaxy
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initGalaxy);
+    document.addEventListener('DOMContentLoaded', () => {
+      initGalaxy();
+      initCertModal();
+      initCurriculumScroll();
+      initVideoPlaceholders();
+    });
   } else {
     initGalaxy();
+    initCertModal();
+    initCurriculumScroll();
+    initVideoPlaceholders();
+  }
+
+  /* ===================================================================
+     CERTIFICATE LIGHTBOX MODAL
+     Interactive enlarged preview for graVITas participation certificates
+     =================================================================== */
+  function initCertModal() {
+    const modal = document.getElementById('certModal');
+    if (!modal) return;
+
+    const modalImg = document.getElementById('certModalImg');
+    const modalTitle = document.getElementById('certModalTitle');
+    const modalClose = document.getElementById('certModalClose');
+    const modalBackdrop = modal.querySelector('.cert-modal-backdrop');
+    const certCards = document.querySelectorAll('.cert-card[data-cert-src]');
+
+    function openModal(card) {
+      const src = card.getAttribute('data-cert-src');
+      const title = card.getAttribute('data-cert-title') || 'Certificate of Participation';
+      const alt = card.getAttribute('data-cert-alt') || title;
+
+      if (modalImg) {
+        modalImg.src = src;
+        modalImg.alt = alt;
+      }
+      if (modalTitle) {
+        modalTitle.textContent = title;
+      }
+
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (modalClose) modalClose.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    certCards.forEach(card => {
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
+  /* ===================================================================
+     CURRICULUM PILLS ACTIVE TRACKING & SMOOTH HORIZONTAL SCROLL
+     =================================================================== */
+  function initCurriculumScroll() {
+    const pills = document.querySelectorAll('.curriculum-pill');
+    if (!pills.length) return;
+
+    const targets = Array.from(pills).map(p => {
+      const href = p.getAttribute('href');
+      return href ? document.querySelector(href) : null;
+    }).filter(Boolean);
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY + 140;
+      let currentTargetId = '';
+
+      for (let i = targets.length - 1; i >= 0; i--) {
+        if (targets[i].offsetTop <= scrollPos) {
+          currentTargetId = targets[i].id;
+          break;
+        }
+      }
+
+      pills.forEach(pill => {
+        const matches = pill.getAttribute('href') === '#' + currentTargetId;
+        pill.classList.toggle('active', matches);
+      });
+    }, { passive: true });
+  }
+
+  /* ===================================================================
+     VIDEO PLAYER INTERACTION & AUDIO COORDINATION
+     =================================================================== */
+  function initVideoPlaceholders() {
+    const introVideo = document.getElementById('introVideo');
+    if (introVideo) {
+      // Pause speech synthesis when video starts playing
+      introVideo.addEventListener('play', function () {
+        if ('speechSynthesis' in window && window.speechSynthesis.speaking) {
+          window.speechSynthesis.cancel();
+          const heroVoiceBtn = document.getElementById('heroVoiceBtn');
+          if (heroVoiceBtn) {
+            heroVoiceBtn.classList.remove('playing', 'paused');
+            const label = heroVoiceBtn.querySelector('.audio-btn-text');
+            if (label) label.textContent = 'Listen to Intro';
+          }
+        }
+      });
+    }
+
+    const playBtns = document.querySelectorAll('.video-play-btn');
+    playBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const details = this.closest('.about-video-card, .video-card-container')?.querySelector('.video-talking-points');
+        if (details) {
+          details.open = true;
+          details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
   }
 
 })();
